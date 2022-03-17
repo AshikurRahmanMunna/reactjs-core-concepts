@@ -16,21 +16,19 @@ function App() {
       <Person></Person>
       <Person></Person>
       <Person></Person>
-      <Person></Person>
-      <Person></Person>
       <h5>New Component. YAY</h5>
-      <Friend></Friend>
       <Friend></Friend>
       <Friend></Friend>
     </div>
   )
 }
 
-function Person() {
+function Person(props) {
+  console.log(props)
   return (
     <div className="person">
-      <h1>Sakib Al Hasan</h1>
-      <p>Profession: Cricketer</p>
+      <h1>{props.name}</h1>
+      <p>Profession: {props.profession}</p>
     </div>
   )
 }
